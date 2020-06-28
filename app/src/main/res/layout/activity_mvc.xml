@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".mvc.MvcActivity">
+      <data>
+          <variable
+              name="mvcEventBus"
+              type="com.cn.androidframeworkdemo.mvc.MvcActivity.MvcEventBus" />
+      </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/show"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"/>
+
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:tag="add"
+            android:text="增加"
+            android:onClick="@{mvcEventBus.onClick}"
+            />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/add"
+            android:tag="delete"
+            android:text="删除"
+            android:onClick="@{mvcEventBus.onClick}"
+            />
+
+
+        <Button
+            android:id="@+id/edit_query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/delete"
+            android:layout_marginTop="10dp"
+            android:tag="edit_query"
+            android:text="查询"
+            android:onClick="@{mvcEventBus.onClick}"
+            />
+
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/edit_query"
+            android:layout_marginTop="10dp"
+            android:tag="update"
+            android:text="修改"
+            android:onClick="@{mvcEventBus.onClick}"
+            />
+
+    </RelativeLayout>
+</layout>

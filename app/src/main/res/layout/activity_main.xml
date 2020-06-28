@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+<data>
+    //在这里定义变量
+    <variable
+        name="evnetBus"
+        type="com.cn.androidframeworkdemo.MainActivity"/>
+
+    <variable
+        name="eventable"
+        type="com.cn.androidframeworkdemo.MainActivity.Eventable"/>
+
+
+</data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+        android:id="@+id/mvc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="mvc"
+        android:onClick="@{eventable.onClick}"
+        android:tag="mvc"
+            />
+
+
+        <Button
+         android:id="@+id/mvp"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/mvc"
+         android:layout_marginTop="20dp"
+         android:layout_centerHorizontal="true"
+         android:text="mvp"
+         android:onClick="@{evnetBus::onclick}"
+         android:tag="mvp"
+            />
+
+
+        <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/mvp"
+         android:layout_marginTop="20dp"
+         android:layout_centerHorizontal="true"
+         android:text="mvvm"
+         android:onClick="@{evnetBus::onclick}"
+         android:tag="mvvm"/>
+
+    </RelativeLayout>
+</layout>
