@@ -14,7 +14,7 @@ import com.cn.androidframeworkdemo.mvc.bean.Person;
     @Override
     public void add(Person person, ResultInterf resultInterf) {
        Log.i("test", "test");
-  //   resultInterf.onSuccess("测试成功");
+       resultInterf.onAddSuccess("测试成功");
     }
 
     @Override

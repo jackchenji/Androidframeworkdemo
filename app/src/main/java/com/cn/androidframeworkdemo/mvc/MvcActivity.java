@@ -34,25 +34,41 @@ private  String TAG="MvcActivityTag";
         public  void onClick(View view){
             switch ((String)view.getTag()){
                 case "add":
-                    yewuModel.add(person, (ResultInterf) this);
+                    yewuModel.add(person, (ResultInterf) MvcActivity.this);
                     break;
                 case "delete":
-                    yewuModel.delete(person, (ResultInterf) this);
+                    yewuModel.delete(person, (ResultInterf) MvcActivity.this);
                     break;
                 case "update":
-                    yewuModel.update(person, (ResultInterf) this);
+                    yewuModel.update(person, (ResultInterf) MvcActivity.this);
                     break;
                 case "edit_query":
-                    yewuModel.query(person, (ResultInterf) this);
+                    yewuModel.query(person, (ResultInterf)MvcActivity.this);
                     break;
             }
         }
 
     }
 
+
     @Override
-    public void onSuccess(Object object) {
-       Log.i(TAG, (String) object);
+    public void onAddSuccess(Object object) {
+
+    }
+
+    @Override
+    public void onDeleteSuccess(Object object) {
+
+    }
+
+    @Override
+    public void onQuerySuccess(Object object) {
+
+    }
+
+    @Override
+    public void onModifySuccess(Object object) {
+
     }
 
     @Override
